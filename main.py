@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
 
 # Configure your API key
-genai.configure(api_key="AIzaSyCOsQgWlKciYQmb2N7sRT_zOlMvNY9cXAU")
+genai.configure(api_key="ENTER_YOUT_API_KEY")
 
 def analyze_code(code, output_text):
     """Analyzes C++ code and displays the result in the GUI."""
