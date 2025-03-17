@@ -1,9 +1,11 @@
 import { geminiModel } from "../utils/geminiClient.js";
-export const analyzeCode = async (req, res) => {
+export const debugCode = async (req, res) => {
   try {
     const code = req.body.code;
-    const prompt = `Analyze the following C++ code and provide a detailed explanation of its functionality,
-        including step-by-step execution, diagrams if applicable, and any potential errors. ${code}`;
+    const prompt = `Debug and correct the following C++ code. Provide the corrected code, a detailed explanation of the errors,
+    and how they were fixed.
+
+    Code: ${code}`;
 
     // Get the response from the gemini model
     const result = await geminiModel.generateContent(prompt);
